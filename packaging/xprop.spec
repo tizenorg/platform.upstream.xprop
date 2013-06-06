@@ -18,6 +18,7 @@ xprop displays window and font properties of an X server.
 %setup -q
 
 %build
+%autogen
 %configure
 make %{?_smp_mflags}
 
