@@ -6,6 +6,7 @@ Summary:        Property displayer for X
 Url:            http://xorg.freedesktop.org/
 Group:          Graphics/Utilities
 Source0:        http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.bz2
+Source1001: 	xprop.manifest
 BuildRequires:  pkg-config
 BuildRequires:  pkgconfig(x11)
 BuildRequires:  pkgconfig(xorg-macros) >= 1.8
@@ -16,6 +17,7 @@ xprop displays window and font properties of an X server.
 
 %prep
 %setup -q
+cp %{SOURCE1001} .
 
 %build
 %autogen
@@ -26,6 +28,7 @@ make %{?_smp_mflags}
 %make_install
 
 %files
+%manifest %{name}.manifest
 %defattr(-,root,root)
 %license  COPYING 
 %{_bindir}/xprop
