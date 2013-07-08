@@ -1,0 +1,8 @@
+Change-Id: I14dcde220446514c54f1b81a9a10bca5bb71d1ce
+Code-Review+2: Ryan Ware <ware@linux.intel.com>
+Verified+1: Ryan Ware <ware@linux.intel.com>
+Submitted-by: Ryan Ware <ware@linux.intel.com>
+Submitted-at: Mon, 08 Jul 2013 10:07:56 -0700
+Reviewed-on: https://review.tizen.org/gerrit/5008
+Project: platform/upstream/xprop
+Branch: refs/heads/tizen
