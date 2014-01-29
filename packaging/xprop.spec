@@ -1,3 +1,5 @@
+%bcond_with x
+
 Name:           xprop
 Version:        1.2.1
 Release:        1
@@ -11,6 +13,10 @@ BuildRequires:  pkg-config
 BuildRequires:  pkgconfig(x11)
 BuildRequires:  pkgconfig(xorg-macros) >= 1.8
 BuildRequires:  pkgconfig(xproto) >= 7.0.17
+
+%if !%{with x}
+ExclusiveArch:
+%endif
 
 %description
 xprop displays window and font properties of an X server.
@@ -30,7 +36,7 @@ make %{?_smp_mflags}
 %files
 %manifest %{name}.manifest
 %defattr(-,root,root)
-%license  COPYING 
+%license  COPYING
 %{_bindir}/xprop
 %{_mandir}/man1/xprop.1%{?ext_man}
 
